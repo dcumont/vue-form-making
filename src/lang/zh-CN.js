@@ -116,8 +116,10 @@ export default {
         endPlaceholder: '结束时间占位内容',
         format: '格式',
         limit: '最大上传数',
+        /* Remove Qiniu upload:
         isQiniu: '使用七牛上传',
         tokenFunc: '获取七牛Token方法',
+        */
         imageAction: '图片上传地址',
         tip: '提示说明文字',
         action: '上传地址',

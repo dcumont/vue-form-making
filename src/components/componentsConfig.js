@@ -250,7 +250,9 @@ export const advanceComponents = [
       disabled: false,
       length: 8,
       multiple: false,
+      /* Remove Qiniu upload:
       isQiniu: false,
+      */
       isDelete: false,
       min: 0,
       isEdit: false,

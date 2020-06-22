@@ -30,7 +30,7 @@
 
     <div class="el-upload el-upload--picture-card"
       :class="{'is-disabled': disabled}"
-      v-show="(!isQiniu || (isQiniu && token)) && fileList.length < length"
+      v-show="/* Remove Qiniu upload: (!isQiniu || (isQiniu && token)) && */ fileList.length < length"
       :style="{width: width+'px', height: height+'px'}"
       @click.self="handleAdd"
     >
@@ -44,7 +44,9 @@
 <script>
 import Viewer from 'viewerjs'
 import Draggable from 'vuedraggable'
+/* Remove Qiniu upload:
 import * as qiniu from 'qiniu-js'
+*/
 require('viewerjs/dist/viewer.css')
 export default {
   components: {
@@ -79,10 +81,12 @@ export default {
       type: Number,
       default: 9
     },
+    /* Remove Qiniu upload:
     isQiniu: {
       type: Boolean,
       default: false
     },
+    */
     isDelete: {
       type: Boolean,
       default: false
@@ -167,7 +171,7 @@ export default {
           }
 
           this.$nextTick(() => {
-            if (this.isQiniu) {
+            if ( /* Remove Qiniu upload: this.isQiniu */ false ) {
               this.uplaodAction2(reader.result, file, key)
             } else {
               this.uplaodAction(reader.result, file, key)
@@ -224,6 +228,7 @@ export default {
         }
       }
     },
+    /* Remove Qiniu upload:
     uplaodAction2 (res, file, key) {
       const _this = this
       const observable = qiniu.upload(file, key, this.token, {
@@ -261,6 +266,7 @@ export default {
         }
       })
     },
+    */
     handleRemove (key) {
       this.fileList.splice(this.fileList.findIndex(item => item.key === key), 1)
     },

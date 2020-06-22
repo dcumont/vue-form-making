@@ -167,7 +167,7 @@
         :domain="widget.options.domain"
         :multiple="widget.options.multiple"
         :length="widget.options.length"
-        :is-qiniu="widget.options.isQiniu"
+        :is-qiniu="/* Remove Qiniu upload: widget.options.isQiniu */false"
         :is-delete="widget.options.isDelete"
         :min="widget.options.min"
         :is-edit="widget.options.isEdit"
@@ -229,11 +229,13 @@ export default {
       })
     }
 
+    /* Remove Qiniu upload
     if (this.widget.type === 'imgupload' && this.widget.options.isQiniu) {
       this.remote[this.widget.options.tokenFunc]((data) => {
         this.widget.options.token = data
       })
     }
+    */
   },
   methods: {
   },

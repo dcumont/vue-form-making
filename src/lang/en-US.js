@@ -116,8 +116,10 @@ export default {
         endPlaceholder: 'Placeholder of end time',
         format: 'Format',
         limit: 'Maximum Upload Count',
+        /* Remove Qiniu upload:
         isQiniu: 'Upload with Qiniu Cloud',
         tokenFunc: 'A funchtin to get Qiniu Uptoken',
+        */
         imageAction: 'Picture upload address',
         tip: 'Text Prompt',
         action: 'Upload Address',

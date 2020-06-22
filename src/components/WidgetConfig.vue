@@ -232,7 +232,7 @@
         <el-form-item :label="$t('fm.config.widget.limit')">
           <el-input type="number" v-model.number="data.options.length"></el-input>
         </el-form-item>
-        <el-form-item :label="$t('fm.config.widget.isQiniu')">
+        <!--el-form-item :label="$t('fm.config.widget.isQiniu')">
           <el-switch v-model="data.options.isQiniu"></el-switch>
         </el-form-item>
         <template v-if="data.options.isQiniu">
@@ -247,7 +247,7 @@
           <el-form-item :label="$t('fm.config.widget.imageAction')" :required="true">
             <el-input v-model="data.options.action"></el-input>
           </el-form-item>
-        </template>
+        </template-->
       </template>
 
       <template v-if="data.type=='blank'">
