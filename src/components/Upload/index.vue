@@ -27,14 +27,14 @@
           <i class="iconfont icon-tupianyulan" :title="$t('fm.upload.preview')" @click="handlePreviewFile(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
           -->
           <i v-if="isEdit" class="iconfont icon-sync1" :title="$t('fm.upload.edit')" @click="handleEdit(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
-          <i v-if="isDelete && fileList.length > 1/*Allow only single image upload: min */" class="iconfont icon-delete" :title="$t('fm.upload.delete')" @click="handleRemove(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
+          <i v-if="isDelete && fileList.length > min" class="iconfont icon-delete" :title="$t('fm.upload.delete')" @click="handleRemove(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
         </div>
       </div>
     </draggable>
 
     <div class="el-upload el-upload--picture-card"
       :class="{'is-disabled': disabled}"
-      v-show="/* Remove Qiniu upload: (!isQiniu || (isQiniu && token)) && */ fileList.length < 1 /* /*Allow only single image upload: length*/"
+      v-show="/* Remove Qiniu upload: (!isQiniu || (isQiniu && token)) && */ fileList.length < length"
       :style="{width: width+'px', height: height+'px'}"
       @click.self="handleAdd"
     >

@@ -166,12 +166,12 @@
         :token="widget.options.token"
         :domain="widget.options.domain"
         :multiple="/* Allow only single image upload: widget.options.multiple */false"
-        :length="widget.options.length"
+        :length="/* Remove unused features of image upload in rendered form: widget.options.length */1"
         :is-qiniu="/* Remove Qiniu upload: widget.options.isQiniu */false"
-        :is-delete="widget.options.isDelete"
+        :is-delete="/* Remove unused features of image upload in rendered form: widget.options.isDelete*/true"
         :min="0/* Allow only single image upload: widget.options.min*/"
-        :is-edit="widget.options.isEdit"
-        :action="widget.options.action"
+        :is-edit="/* Remove unused features of image upload in rendered form: widget.options.isEdit*/true"
+        :action="/* Remove unused features of image upload in rendered form: widget.options.action*/''"
       >
       </fm-upload>
     </template>

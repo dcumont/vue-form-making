@@ -246,7 +246,7 @@ export const advanceComponents = [
       width: '',
       tokenFunc: 'funcGetToken',
       token: '',
-      /* remove unused features of image upload in rendered form
+      /* Remove unused features of image upload in rendered form:
       domain: 'http://pfp81ptt6.bkt.clouddn.com/',
       disabled: false,
       */
@@ -257,7 +257,7 @@ export const advanceComponents = [
       /* Remove Qiniu upload:
       isQiniu: false,
       */
-      /* remove unused features of image upload in rendered form
+      /* Remove unused features of image upload in rendered form:
       isDelete: false,
       min: 0,
       isEdit: false,
