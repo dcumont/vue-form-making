@@ -41,7 +41,7 @@
       <el-form-item :label="$t('fm.config.widget.step')" v-if="Object.keys(data.options).indexOf('step')>=0">
         <el-input-number v-model="data.options.step" :min="0" :max="100" :step="1"></el-input-number>
       </el-form-item>
-      <el-form-item :label="$t('fm.config.widget.multiple')" v-if="data.type=='select' || data.type=='imgupload'">
+      <el-form-item :label="$t('fm.config.widget.multiple')" v-if="data.type=='select' /* Allow only single image upload: || data.type=='imgupload'*/">
         <el-switch v-model="data.options.multiple" @change="handleSelectMuliple"></el-switch>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.filterable')" v-if="data.type=='select'">
@@ -229,10 +229,13 @@
 
       <template v-if="data.type=='imgupload'">
         
+        <!-- Allow only single image upload
         <el-form-item :label="$t('fm.config.widget.limit')">
           <el-input type="number" v-model.number="data.options.length"></el-input>
         </el-form-item>
-        <!--el-form-item :label="$t('fm.config.widget.isQiniu')">
+        -->
+        <!-- Remove Qiniu upload:
+        <el-form-item :label="$t('fm.config.widget.isQiniu')">
           <el-switch v-model="data.options.isQiniu"></el-switch>
         </el-form-item>
         <template v-if="data.options.isQiniu">
@@ -247,7 +250,8 @@
           <el-form-item :label="$t('fm.config.widget.imageAction')" :required="true">
             <el-input v-model="data.options.action"></el-input>
           </el-form-item>
-        </template-->
+        </template>
+        -->
       </template>
 
       <template v-if="data.type=='blank'">

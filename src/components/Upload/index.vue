@@ -27,19 +27,19 @@
           <i class="iconfont icon-tupianyulan" :title="$t('fm.upload.preview')" @click="handlePreviewFile(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
           -->
           <i v-if="isEdit" class="iconfont icon-sync1" :title="$t('fm.upload.edit')" @click="handleEdit(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
-          <i v-if="isDelete && fileList.length > min" class="iconfont icon-delete" :title="$t('fm.upload.delete')" @click="handleRemove(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
+          <i v-if="isDelete && fileList.length > 1/*Allow only single image upload: min */" class="iconfont icon-delete" :title="$t('fm.upload.delete')" @click="handleRemove(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
         </div>
       </div>
     </draggable>
 
     <div class="el-upload el-upload--picture-card"
       :class="{'is-disabled': disabled}"
-      v-show="/* Remove Qiniu upload: (!isQiniu || (isQiniu && token)) && */ fileList.length < length"
+      v-show="/* Remove Qiniu upload: (!isQiniu || (isQiniu && token)) && */ fileList.length < 1 /* /*Allow only single image upload: length*/"
       :style="{width: width+'px', height: height+'px'}"
       @click.self="handleAdd"
     >
       <i class="el-icon-plus" @click.self="handleAdd" :style="{fontSize:miniWidth/4+'px',marginTop: (-miniWidth/8)+'px', marginLeft: (-miniWidth/8)+'px'}"></i>
-      <input accept="image/*" v-if="multiple"  multiple ref="uploadInput" @change="handleChange" type="file" :style="{width: 0, height: 0}" name="file" class="el-upload__input upload-input">
+      <input accept="image/*" v-if="false/*Allow only single image upload: multiple*/"  multiple ref="uploadInput" @change="handleChange" type="file" :style="{width: 0, height: 0}" name="file" class="el-upload__input upload-input">
       <input accept="image/*" v-else ref="uploadInput" @change="handleChange" type="file" :style="{width:0, height: 0}" name="file" class="el-upload__input upload-input">
     </div>
   </div>

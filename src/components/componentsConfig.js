@@ -246,17 +246,23 @@ export const advanceComponents = [
       width: '',
       tokenFunc: 'funcGetToken',
       token: '',
+      /* remove unused features of image upload in rendered form
       domain: 'http://pfp81ptt6.bkt.clouddn.com/',
       disabled: false,
-      length: 8,
+      */
+      length: 1, /* Allow only single image upload */
+      /* Allow only single image upload:
       multiple: false,
+      */
       /* Remove Qiniu upload:
       isQiniu: false,
       */
+      /* remove unused features of image upload in rendered form
       isDelete: false,
       min: 0,
       isEdit: false,
       action: 'https://jsonplaceholder.typicode.com/photos/'
+      */
     }
   },
   {

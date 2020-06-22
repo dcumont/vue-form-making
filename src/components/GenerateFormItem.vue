@@ -165,11 +165,11 @@
         :height="widget.options.size.height"
         :token="widget.options.token"
         :domain="widget.options.domain"
-        :multiple="widget.options.multiple"
+        :multiple="/* Allow only single image upload: widget.options.multiple */false"
         :length="widget.options.length"
         :is-qiniu="/* Remove Qiniu upload: widget.options.isQiniu */false"
         :is-delete="widget.options.isDelete"
-        :min="widget.options.min"
+        :min="0/* Allow only single image upload: widget.options.min*/"
         :is-edit="widget.options.isEdit"
         :action="widget.options.action"
       >
