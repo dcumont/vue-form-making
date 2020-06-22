@@ -181,7 +181,9 @@ export default {
       }
     },
     upload: {
+      /* Remove unused features of image upload in rendered form 
       preview: '预览',
+      */
       edit: '替换',
       delete: '删除'
     }

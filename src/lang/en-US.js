@@ -181,7 +181,9 @@ export default {
       }
     },
     upload: {
+      /* Remove unused features of image upload in rendered form 
       preview: 'preview',
+      */
       edit: 'replace',
       delete: 'delete'
     }

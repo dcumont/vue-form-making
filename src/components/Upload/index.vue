@@ -14,14 +14,18 @@
         class="upload-file" v-for="(item) in fileList" :key="item.key">
         <img :src="item.url" />
 
+        <!-- Remove unused features of image upload in rendered form 
         <el-progress v-if="item.status=='uploading'" :width="miniWidth*0.9" class="upload-progress" type="circle" :percentage="item.percent"></el-progress>
 
         <label class="item-status" v-if="item.status=='success'">
           <i class="el-icon-upload-success el-icon-check"></i>
         </label>
+        -->
 
         <div class="uplaod-action" :style="{height: miniWidth / 4 + 'px'}" v-if="!disabled">
+          <!-- Remove unused features of image upload in rendered form 
           <i class="iconfont icon-tupianyulan" :title="$t('fm.upload.preview')" @click="handlePreviewFile(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
+          -->
           <i v-if="isEdit" class="iconfont icon-sync1" :title="$t('fm.upload.edit')" @click="handleEdit(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
           <i v-if="isDelete && fileList.length > min" class="iconfont icon-delete" :title="$t('fm.upload.delete')" @click="handleRemove(item.key)" :style="{'font-size': miniWidth/8+'px'}"></i>
         </div>
