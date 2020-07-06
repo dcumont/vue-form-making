@@ -172,6 +172,7 @@
         :min="0/* Allow only single image upload: widget.options.min*/"
         :is-edit="/* Remove unused features of image upload in rendered form: widget.options.isEdit*/true"
         :action="/* Remove unused features of image upload in rendered form: widget.options.action*/''"
+        @validate="validate"
       >
       </fm-upload>
     </template>
@@ -238,6 +239,10 @@ export default {
     */
   },
   methods: {
+    validate( value, error ){
+      // console.log( 'GenerateFormItem, validate:',this.widget.model , value, error )
+      this.$emit( 'validate', this.widget.model, value, error )
+    }
   },
   watch: {
     dataModel: {

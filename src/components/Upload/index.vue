@@ -155,6 +155,15 @@ export default {
         const key = (new Date().getTime()) + '_' + Math.ceil(Math.random() * 99999)
         reader.readAsDataURL(file)
         reader.onload = () => {
+
+          
+          if( file.size > 1048576 ){ // TODO: move to a config file
+            // console.log( 'Upload/index, handleChange' )
+            this.$emit( 'validate', false, 'InputRequired', 'FileIsTooBig' );
+            alert( this.$t('fm.config.widget.tooBig') )
+            return
+          }
+
           if (this.editIndex >= 0) {
 
             this.$set(this.fileList, this.editIndex, {

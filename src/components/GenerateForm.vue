@@ -47,6 +47,7 @@
             :rules="rules" 
             :widget="item" 
             @input-change="onInputChange"
+            @validate="validate"
             :remote="remote">
           </genetate-form-item>
         </template>
@@ -139,6 +140,10 @@ export default {
     },
     refresh () {
       
+    },
+    validate( field, value, error ){
+      // console.log( 'GenerateForm, validate:', field, value, error )
+      this.$refs.generateForm.$emit( 'validate', field, value, error )
     }
   },
   watch: {
