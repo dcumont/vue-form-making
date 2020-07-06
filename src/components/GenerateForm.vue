@@ -116,6 +116,9 @@ export default {
           }      
         }
       }
+
+      // Will emit the "on-change" event that is necessary to provide default values
+      this.onInputChange( null, null )
     },
     getData () {
       return new Promise((resolve, reject) => {
@@ -148,7 +151,6 @@ export default {
     value: {
       deep: true,
       handler (val) {
-        console.log(JSON.stringify(val))
         this.models = {...this.models, ...val}
       }
     }
