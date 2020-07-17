@@ -119,7 +119,8 @@ export default {
       }
 
       // Will emit the "on-change" event that is necessary to provide default values
-      this.onInputChange( null, null )
+      // Reverted: sometimes causes lose of actual content
+      // this.onInputChange( null, null )
     },
     getData () {
       return new Promise((resolve, reject) => {
