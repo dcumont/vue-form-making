@@ -1,16 +1,41 @@
 # vue-form-making
 
-[简体中文](./README.zh-CN.md) | English
+<p>
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.6.5-brightgreen.svg" alt="vue">
+  </a>
+  
+  <a href="https://github.com/ElemeFE/element">
+    <img src="https://img.shields.io/badge/element--ui-2.9.1-brightgreen.svg" alt="element-ui">
+  </a>
+  
+  <a href="https://www.npmjs.com/package/form-making">
+    <img src="https://img.shields.io/npm/dt/form-making" alt="downloads">
+  </a>
+  
+  <a href="https://github.com/GavinZhuLei/vue-form-making/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/GavinZhulei/vue-form-making" alt="license">
+  </a>
 
-## Intro
+  <a href="https://xscode.com/gavinzhulei/vue-form-making">
+    <img src="https://img.shields.io/badge/Available%20on-xs%3Acode-blue?style=?style=plastic&logo=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////////VXz1bAAAAAJ0Uk5T/wDltzBKAAAAlUlEQVR42uzXSwqAMAwE0Mn9L+3Ggtgkk35QwcnSJo9S+yGwM9DCooCbgn4YrJ4CIPUcQF7/XSBbx2TEz4sAZ2q1RAECBAiYBlCtvwN+KiYAlG7UDGj59MViT9hOwEqAhYCtAsUZvL6I6W8c2wcbd+LIWSCHSTeSAAECngN4xxIDSK9f4B9t377Wd7H5Nt7/Xz8eAgwAvesLRjYYPuUAAAAASUVORK5CYII=" alt="xscode">
+  </a>
+</p>
+
+[简体中文](./README.zh-CN.md) | English
 
 The FormMaking developed base on [vue](https://github.com/vuejs/vue) and [element-ui](https://github.com/ElemeFE/element), equipts with the latest front-end technology stack, built-in i18n internationalization solution, all of those are aimed at making developmemt simpler, and more efficiently.
 
-- [Preview](http://form.xiaoyaoji.cn/basic-version)
+![](http://cdn.form.xiaoyaoji.cn/Jietu20200708-202415-HD.gif)
 
-- [Document](http://docs.form.xiaoyaoji.cn)
+* [Preview](http://form.xiaoyaoji.cn/basic-version)
+* [Development](/docs/guide.md)
+* [Components](/docs/component.md)
+  * [MakingForm](/docs/component.md#makingform) (Quickly design the form page based on the visual operation.)
+  * [GenerateForm](/docs/component.md#generateform) (The generator will render a form page quickly base on the configuration json data captured in the designer.)
+* [Secondary Development](/docs/develop.md)
 
-- [Advanced](http://form.xiaoyaoji.cn) Privade more components and APIs
+This project is the base version, and if you need to experience the [Advanced](http://form.making.link), you can go to the advanced version, which provides more components and functionality.
 
 ## Feature
 
@@ -26,24 +51,12 @@ The FormMaking developed base on [vue](https://github.com/vuejs/vue) and [elemen
 * Get form data quickly
 * Internationalization support
 
-## Module
+## Third-party plug-ins
 
-- [MakingForm](http://docs.form.xiaoyaoji.cn/zh/guide/making-form.html) (Quickly design the form page based on the visual operation and obtain the form configuration json data).
-
-- [GenerateForm](http://docs.form.xiaoyaoji.cn/zh/guide/generate-form.html) (The generator will render a form page quickly base on the configuration json data captured in the designer).
-
-## Issue
-
-* If you find a new bug or have a new feature request, please create a new issue.
-
-
-## Donation  
-
-If you do like ours open source, would you mind to buy us a cup of coffee :) lol ☺
-
-![](http://docs.form.xiaoyaoji.cn/donation.jpeg)
-
-[PayPal Me](https://paypal.me/gavinzhulei)
+* [vuedraggable](https://github.com/SortableJS/Vue.Draggable)
+* [element-ui](https://github.com/ElemeFE/element)
+* [ace](https://github.com/ajaxorg/ace)
+* [vue2-editor](https://github.com/davidroyer/vue2-editor)
 
 ## Browsers support
 
@@ -55,8 +68,10 @@ Modern browsers and Internet Explorer 10+.
 
 ## Licenses
 
-[LGPL](https://opensource.org/licenses/LGPL-3.0)
+[LGPL-3.0](https://opensource.org/licenses/LGPL-3.0)
 
-You can use the vue-form-making source code in an open source project under the LGPL license and retain the copyright information.
+[![xscode](https://img.shields.io/badge/Available%20on-xs%3Acode-blue?style=?style=plastic&logo=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////////VXz1bAAAAAJ0Uk5T/wDltzBKAAAAlUlEQVR42uzXSwqAMAwE0Mn9L+3Ggtgkk35QwcnSJo9S+yGwM9DCooCbgn4YrJ4CIPUcQF7/XSBbx2TEz4sAZ2q1RAECBAiYBlCtvwN+KiYAlG7UDGj59MViT9hOwEqAhYCtAsUZvL6I6W8c2wcbd+LIWSCHSTeSAAECngN4xxIDSK9f4B9t377Wd7H5Nt7/Xz8eAgwAvesLRjYYPuUAAAAASUVORK5CYII=)](https://xscode.com/gavinzhulei/vue-form-making)
 
-If you want to use vue-form-making source code in non-open source sites, projects and applications, you need to purchase [Commercial License](http://form.xiaoyaoji.cn/pricing).
+Support and additional versions are available on xs:code
+
+[![xscode](http://cdn.form.xiaoyaoji.cn/vue-form-making-banner.png)](https://xscode.com/gavinzhulei/vue-form-making)
