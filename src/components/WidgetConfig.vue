@@ -33,13 +33,13 @@
         <el-switch v-model="data.options.showInput" ></el-switch>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.min')" v-if="Object.keys(data.options).indexOf('min')>=0">
-        <el-input-number v-model="data.options.min" :min="0" :max="100" :step="1"></el-input-number>
+        <el-input-number v-model="data.options.min" :step="1"></el-input-number>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.max')" v-if="Object.keys(data.options).indexOf('max')>=0">
-        <el-input-number v-model="data.options.max" :min="0" :max="100" :step="1"></el-input-number>
+        <el-input-number v-model="data.options.max" :step="1"></el-input-number>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.step')" v-if="Object.keys(data.options).indexOf('step')>=0">
-        <el-input-number v-model="data.options.step" :min="0" :max="100" :step="1"></el-input-number>
+        <el-input-number v-model="data.options.step" :step="1"></el-input-number>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.multiple')" v-if="data.type=='select' /* Allow only single image upload: || data.type=='imgupload'*/">
         <el-switch v-model="data.options.multiple" @change="handleSelectMuliple"></el-switch>
