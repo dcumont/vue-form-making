@@ -31,8 +31,8 @@ export const basicComponents = [
       width: '',
       required: false,
       defaultValue: 0,
-      min: '',
-      max: '',
+      min: -Infinity,
+      max: Infinity,
       step: 1,
       disabled: false,
       controlsPosition: ''
@@ -42,7 +42,7 @@ export const basicComponents = [
     type: 'radio',
     icon: 'icon-radio-active',
     options: {
-      inline: false,
+      inline: true,
       defaultValue: '',
       showLabel: false,
       options: [
@@ -62,12 +62,12 @@ export const basicComponents = [
       required: false,
       width: '',
       remote: false,
-      remoteOptions: [],
+      // remoteOptions: [],
       props: {
         value: 'value',
         label: 'label'
       },
-      remoteFunc: '',
+      // remoteFunc: '',
       disabled: false,
     }
   },
@@ -75,7 +75,7 @@ export const basicComponents = [
     type: 'checkbox',
     icon: 'icon-check-box',
     options: {
-      inline: false,
+      inline: true,
       defaultValue: [],
       showLabel: false,
       options: [
@@ -92,12 +92,12 @@ export const basicComponents = [
       required: false,
       width: '',
       remote: false,
-      remoteOptions: [],
+      // remoteOptions: [],
       props: {
         value: 'value',
         label: 'label'
       },
-      remoteFunc: '',
+      // remoteFunc: '',
       disabled: false,
     }
   },
@@ -178,18 +178,19 @@ export const basicComponents = [
         },
         {
           value: 'Option 2'
-        },{
+        },
+        {
           value: 'Option 3'
         }
       ],
       remote: false,
       filterable: false,
-      remoteOptions: [],
+      // remoteOptions: [],
       props: {
         value: 'value',
         label: 'label'
       },
-      remoteFunc: ''
+      // remoteFunc: ''
     }
   },
   {
@@ -227,13 +228,13 @@ export const basicComponents = [
 ]
 
 export const advanceComponents = [
-  {
-    type: 'blank',
-    icon: 'icon-zidingyishuju',
-    options: {
-      defaultType: 'String'
-    }
-  },
+  // {
+  //   type: 'blank',
+  //   icon: 'icon-zidingyishuju',
+  //   options: {
+  //     defaultType: 'String'
+  //   }
+  // },
   {
     type: 'imgupload',
     icon: 'icon-tupian',
@@ -273,45 +274,45 @@ export const advanceComponents = [
       width: ''
     }
   },
-  {
-    type: 'cascader',
-    icon: 'icon-jilianxuanze',
-    options: {
-      defaultValue: [],
-      width: '',
-      placeholder: '',
-      disabled: false,
-      clearable: false,
-      remote: true,
-      remoteOptions: [],
-      props: {
-        value: 'value',
-        label: 'label',
-        children: 'children'
-      },
-      remoteFunc: ''
-    }
-  }
+  // {
+  //   type: 'cascader',
+  //   icon: 'icon-jilianxuanze',
+  //   options: {
+  //     defaultValue: [],
+  //     width: '',
+  //     placeholder: '',
+  //     disabled: false,
+  //     clearable: false,
+  //     remote: true,
+  //     // remoteOptions: [],
+  //     props: {
+  //       value: 'value',
+  //       label: 'label',
+  //       children: 'children'
+  //     },
+  //     // remoteFunc: ''
+  //   }
+  // }
 ]
 
 export const layoutComponents = [
-  {
-    type: 'grid',
-    icon: 'icon-grid-',
-    columns: [
-      {
-        span: 12,
-        list: []
-      },
-      {
-        span: 12,
-        list: []
-      }
-    ],
-    options: {
-      gutter: 0,
-      justify: 'start',
-      align: 'top'
-    }
-  }
+  // {
+  //   type: 'grid',
+  //   icon: 'icon-grid-',
+  //   columns: [
+  //     {
+  //       span: 12,
+  //       list: []
+  //     },
+  //     {
+  //       span: 12,
+  //       list: []
+  //     }
+  //   ],
+  //   options: {
+  //     gutter: 0,
+  //     justify: 'start',
+  //     align: 'top'
+  //   }
+  // }
 ]

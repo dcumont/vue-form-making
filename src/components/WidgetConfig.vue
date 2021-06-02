@@ -66,11 +66,11 @@
         </el-switch>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.option')" v-if="Object.keys(data.options).indexOf('options')>=0">
-        <el-radio-group v-model="data.options.remote" size="mini" style="margin-bottom:10px;">
+        <!-- <el-radio-group v-model="data.options.remote" size="mini" style="margin-bottom:10px;">
           <el-radio-button :label="false">{{$t('fm.config.widget.staticData')}}</el-radio-button>
           <el-radio-button :label="true">{{$t('fm.config.widget.remoteData')}}</el-radio-button>
-        </el-radio-group>
-        <template v-if="data.options.remote">
+        </el-radio-group> -->
+        <!-- <template v-if="data.options.remote">
           <div>
             <el-input size="mini" style="" v-model="data.options.remoteFunc">
               <template slot="prepend">{{$t('fm.config.widget.remoteFunc')}}</template>
@@ -83,7 +83,8 @@
             </el-input>
           </div>
         </template>
-        <template v-else>
+        <template v-else> -->
+        <template>
           <template v-if="data.type=='radio' || (data.type=='select'&&!data.options.multiple)">
             <el-radio-group v-model="data.options.defaultValue">
               <draggable tag="ul" :list="data.options.options" 
@@ -137,7 +138,7 @@
         
       </el-form-item>
 
-      <el-form-item :label="$t('fm.config.widget.remoteData')" v-if="data.type=='cascader'">
+      <!-- <el-form-item :label="$t('fm.config.widget.remoteData')" v-if="data.type=='cascader'">
         <div>
           <el-input size="mini" style="" v-model="data.options.remoteFunc">
             <template slot="prepend">{{$t('fm.config.widget.remoteFunc')}}</template>
@@ -152,7 +153,7 @@
             <template slot="prepend">{{$t('fm.config.widget.childrenOption')}}</template>
           </el-input>
         </div>
-      </el-form-item>
+      </el-form-item> -->
 
       <el-form-item :label="$t('fm.config.widget.defaultValue')" v-if="Object.keys(data.options).indexOf('defaultValue')>=0 && (data.type == 'textarea' || data.type == 'input' || data.type=='rate' || data.type=='color' || data.type=='switch')">
         <el-input v-if="data.type=='textarea'" type="textarea" :rows="5" v-model="data.options.defaultValue"></el-input>
