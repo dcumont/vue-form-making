@@ -102,6 +102,8 @@ export default {
         showAlpha: 'Support transparency options',
         showLabel: 'Show lable',
         option: 'Option',
+        value: 'Value',
+        label: 'Label',
         staticData: 'Static Data',
         remoteData: 'Remote Date',
         remoteFunc: 'Remote Function',

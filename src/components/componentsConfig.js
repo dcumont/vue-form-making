@@ -44,7 +44,7 @@ export const basicComponents = [
     options: {
       inline: true,
       defaultValue: '',
-      showLabel: false,
+      showLabel: true,
       options: [
         {
           value: 'Option 1',
@@ -77,7 +77,7 @@ export const basicComponents = [
     options: {
       inline: true,
       defaultValue: [],
-      showLabel: false,
+      showLabel: true,
       options: [
         {
           value: 'Option 1'
@@ -133,7 +133,7 @@ export const basicComponents = [
       startPlaceholder: '',
       endPlaceholder: '',
       type: 'date',
-      format: 'yyyy-MM-dd',
+      format: 'dd/MM/yyyy',
       timestamp: false,
       required: false,
       width: '',
@@ -170,8 +170,8 @@ export const basicComponents = [
       clearable: false,
       placeholder: '',
       required: false,
-      showLabel: false,
       width: '',
+      showLabel: true,
       options: [
         {
           value: 'Option 1'
@@ -217,14 +217,14 @@ export const basicComponents = [
       width: ''
     }
   },
-  {
+  /*{
     type: 'text',
     icon: 'icon-wenzishezhi-',
     options: {
       defaultValue: 'This is a text',
       customClass: '',
     }
-  }
+  }*/
 ]
 
 export const advanceComponents = [
