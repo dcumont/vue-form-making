@@ -160,7 +160,7 @@
         </div>
       </el-form-item> -->
 
-      <el-form-item :label="$t('fm.config.widget.defaultValue')" v-if="Object.keys(data.options).indexOf('defaultValue')>=0 && (data.type == 'textarea' || data.type == 'input' || data.type=='rate' || data.type=='color' || data.type=='switch')">
+      <el-form-item :label="$t('fm.config.widget.defaultValue')" v-if="Object.keys(data.options).indexOf('defaultValue')>=0 && (data.type == 'textarea' || data.type == 'input' || data.type=='rate' || data.type=='color' || data.type=='switch' || data.type=='text')">
         <el-input v-if="data.type=='textarea'" type="textarea" :rows="5" v-model="data.options.defaultValue"></el-input>
         <el-input v-if="data.type=='input'" v-model="data.options.defaultValue"></el-input>
         <el-rate v-if="data.type == 'rate'" style="display:inline-block;vertical-align: middle;" :max="data.options.max" :allow-half="data.options.allowHalf" v-model="data.options.defaultValue"></el-rate>
@@ -171,6 +171,7 @@
           :show-alpha="data.options.showAlpha"
         ></el-color-picker>
         <el-switch v-if="data.type=='switch'" v-model="data.options.defaultValue"></el-switch>
+        <el-input v-if="data.type=='text'" v-model="data.options.defaultValue"></el-input>
       </el-form-item>
 
       <template v-if="data.type == 'time' || data.type == 'date'">
@@ -337,7 +338,10 @@
           </el-select>
           
           <div v-if="Object.keys(data.options).indexOf('pattern')>=0">
-            <el-input size="mini" v-model.lazy="data.options.pattern"  style=" width: 240px;" :placeholder="$t('fm.config.widget.patternPlaceholder')"></el-input>
+            <el-input size="mini" class="config-pattern-input" v-model.lazy="data.options.pattern"  style=" width: 240px;" :placeholder="$t('fm.config.widget.patternPlaceholder')">
+              <template slot="prepend" >/</template>
+              <template slot="append" >/</template>
+            </el-input>
           </div>
         </el-form-item>
       </template>
