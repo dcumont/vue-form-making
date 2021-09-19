@@ -179,6 +179,12 @@ export default {
         validatorRequired: 'Required',
         validatorType: 'Invaild format',
         validatorPattern: 'Unmatched pattern'
+      },
+      rules: {
+        model: {
+          required: 'ID is required',
+          allowedChars: 'ID must contain only unaccented lowercase chars, numbers & underscores',
+        }
       }
     },
     upload: {

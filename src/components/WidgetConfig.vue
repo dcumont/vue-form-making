@@ -1,7 +1,7 @@
 <template>
   <div v-if="show">
-    <el-form label-position="top">
-      <el-form-item :label="$t('fm.config.widget.model')" v-if="data.type!='grid'">
+    <el-form label-position="top" :model="data" :ref="data" :rules="rules">
+      <el-form-item :label="$t('fm.config.widget.model')" v-if="data.type!='grid'" prop="model">
         <el-input v-model="data.model"></el-input>
       </el-form-item>
       <el-form-item :label="$t('fm.config.widget.name')" v-if="data.type!='grid'">
@@ -359,6 +359,12 @@ export default {
   props: ['data'],
   data () {
     return {
+      rules: {
+        model: [
+          { required: true, message: this.$t('fm.config.rules.model.required'), trigger: 'change' },
+          { pattern: /^[a-z0-9_]*$/, message: this.$t('fm.config.rules.model.allowedChars'), trigger: 'change' },
+        ],
+      },
       validator: {
         type: null,
         required: null,
