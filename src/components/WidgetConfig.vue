@@ -438,7 +438,7 @@ export default {
 
     validateRequired (val) {
       if (val) {
-        this.validator.required = {required: true, message: `${this.data.name}${this.$t('fm.config.widget.validatorRequired')}`}
+        this.validator.required = {required: true, message:this.$t('fm.config.widget.validatorRequired')}
       } else {
         this.validator.required = null
       }
@@ -454,7 +454,7 @@ export default {
       }
       
       if (val) {
-        this.validator.type = {type: val, message: this.data.name + this.$t('fm.config.widget.validatorType')}
+        this.validator.type = {type: val, message: this.$t('fm.config.widget.validatorType', { type: val })}
       } else {
         this.validator.type = null
       }
@@ -467,7 +467,7 @@ export default {
       }
 
       if (val) {
-        this.validator.pattern = {pattern: val, message: this.data.name + this.$t('fm.config.widget.validatorPattern')}
+        this.validator.pattern = {pattern: val, message: this.$t('fm.config.widget.validatorPattern', { pattern: val })}
       } else {
         this.validator.pattern = null
       }
