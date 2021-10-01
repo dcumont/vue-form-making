@@ -84,8 +84,8 @@
           <el-aside class="widget-config-container">
             <el-container>
               <el-header height="45px">
-                <div class="config-tab" :class="{active: configTab=='widget'}" @click="handleConfigSelect('widget')">{{$t('fm.config.widget.title')}}</div>
-                <!-- <div class="config-tab" :class="{active: configTab=='form'}" @click="handleConfigSelect('form')">{{$t('fm.config.form.title')}}</div> -->
+                <!--div class="config-tab" :class="{active: configTab=='widget'}" @click="handleConfigSelect('widget')">{{$t('fm.config.widget.title')}}</div>
+                < <div class="config-tab" :class="{active: configTab=='form'}" @click="handleConfigSelect('form')">{{$t('fm.config.form.title')}}</div> -->
               </el-header>
               <el-main class="config-content">
                 <widget-config v-show="configTab=='widget'" :data="widgetFormSelect"></widget-config>
