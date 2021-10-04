@@ -176,7 +176,7 @@
           <vue-editor
             v-model="element.options.defaultValue"
             :style="{width: element.options.width}"
-            :editorToolbar="customToolbar"
+            :editorToolbar="editorConfig.customToolbar"
           >
           </vue-editor>
         </template>
@@ -203,6 +203,8 @@
 
 <script>
 import FmUpload from './Upload'
+import editorConfig from '../util/editorConfig'
+
 export default {
   props: ['element', 'select', 'index', 'data'],
   components: {
@@ -211,18 +213,11 @@ export default {
   data () {
     return {
       selectWidget: this.select,
-      customToolbar:[
-        [{ header: [false, 1, 2, 3, 4, 5, 6] }],
-        ["bold", "italic", "underline", "strike"], // toggled buttons
-        [ { align: "" },
-          { align: "center" },
-          { align: "right" },
-          { align: "justify" } ],
-        [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
-        [{ indent: "-1" }, { indent: "+1" }], 
-        [{ color: [] }, { background: [] }],
-        ["clean"]
-      ]
+    }
+  },
+  computed:{
+    editorConfig(){
+      return editorConfig
     }
   },
   mounted () {

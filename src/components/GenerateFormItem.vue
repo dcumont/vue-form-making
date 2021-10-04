@@ -183,6 +183,7 @@
       <vue-editor
         v-model="dataModel"
         :style="{width: widget.options.width}"
+        :editorToolbar="editorConfig.customToolbar"
       >
       </vue-editor>
     </template>
@@ -208,6 +209,7 @@
 
 <script>
 import FmUpload from './Upload'
+import editorConfig from '../util/editorConfig'
 
 export default {
   props: ['widget', 'models', 'rules', 'remote'],
@@ -216,7 +218,12 @@ export default {
   },
   data () {
     return {
-      dataModel: this.models[this.widget.model]
+      dataModel: this.models[this.widget.model],
+    }
+  },
+  computed:{
+    editorConfig(){
+      return editorConfig
     }
   },
   created () {
