@@ -202,7 +202,7 @@ export const basicComponents = [
       disabled: false,
     }
   },
-  {
+ /* {
     type: 'slider',
     icon: 'icon-slider',
     options: {
@@ -217,7 +217,7 @@ export const basicComponents = [
       width: ''
     }
   },
-  /*{
+  {
     type: 'text',
     icon: 'icon-wenzishezhi-',
     options: {
