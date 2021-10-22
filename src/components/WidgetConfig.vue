@@ -169,6 +169,7 @@
           v-if="data.type == 'color'"
           v-model="data.options.defaultValue"
           :show-alpha="data.options.showAlpha"
+          color-format="rgb"
         ></el-color-picker>
         <el-switch v-if="data.type=='switch'" v-model="data.options.defaultValue"></el-switch>
         <el-input v-if="data.type=='text'" v-model="data.options.defaultValue"></el-input>

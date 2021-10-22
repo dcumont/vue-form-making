@@ -108,6 +108,7 @@
             v-model="element.options.defaultValue"
             :disabled="element.options.disabled"
             :show-alpha="element.options.showAlpha"
+            color-format="rgb"
           ></el-color-picker>
         </template>
 

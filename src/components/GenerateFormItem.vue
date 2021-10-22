@@ -120,6 +120,7 @@
         v-model="dataModel"
         :disabled="widget.options.disabled"
         :show-alpha="widget.options.showAlpha"
+        color-format="rgb"
       ></el-color-picker>
     </template>
 
