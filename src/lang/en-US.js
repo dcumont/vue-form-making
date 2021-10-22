@@ -171,7 +171,6 @@ export default {
         isEdit: 'Editable',
         showPassword: 'Display Password',
         validate: 'Validation',
-        tooBig: 'File is too big',
         required: 'Required',
         patternPlaceholder: 'Fill in the regular expressions',
         newOption: 'New Option',

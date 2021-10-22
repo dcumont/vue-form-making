@@ -160,10 +160,10 @@ export default {
         reader.readAsDataURL(file)
         reader.onload = () => {
 
-          
-          if( file.size > this.maxUploadSize ){ // TODO: move to a config file
+          if( file.size > this.maxUploadSize ){
             this.$emit( 'validate', false, 'fileIsTooBig' );
-            this.$emit( 'fileIsTooBig', {
+            this.$emit( 'file', {
+              succes: false,
               fileSize: file.size,
               maxUploadSize: this.maxUploadSize,
               $el: this.$el,
@@ -194,6 +194,10 @@ export default {
             if ( /* Remove Qiniu upload: this.isQiniu */ false ) {
               this.uplaodAction2(reader.result, file, key)
             } else {
+              this.$emit( 'file', {
+                succes: true,
+                $el: this.$el,
+              });
               this.uplaodAction(reader.result, file, key)
             }
           })
@@ -277,7 +281,7 @@ export default {
             percent: 100
           })
           setTimeout(() => {
-            _this.$set(_this.fileList, _this.fileList.findIndex(item => item.key === key), {
+            _this.$set(_this.fileList, _this.fileList.findIndex(item => item.key === key) , {
               ..._this.fileList[_this.fileList.findIndex(item => item.key === key)],
               status: 'success'
             })

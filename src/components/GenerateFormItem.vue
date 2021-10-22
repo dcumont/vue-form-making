@@ -177,7 +177,7 @@
         :action="/* Remove unused features of image upload in rendered form: widget.options.action*/''"
         @validate="validate"
         :max-upload-size="maxUploadSize"
-        @fileIsTooBig="$emit( 'fileIsTooBig', $event )"
+        @file="$emit( 'file', $event )"
       >
       </fm-upload>
     </template>

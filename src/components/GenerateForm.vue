@@ -29,7 +29,7 @@
                   :widget="citem"
                   @input-change="onInputChange"
                   :max-upload-size="maxUploadSize"
-                  @fileIsTooBig="$emit( 'fileIsTooBig', $event )">
+                  @file="$emit( 'file', $event )">
                 </genetate-form-item>
               </template>
             </el-col>
@@ -52,7 +52,7 @@
             @validate="validate"
             :remote="remote"
             :max-upload-size="maxUploadSize"
-            @fileIsTooBig="$emit( 'fileIsTooBig', $event )">
+            @file="$emit( 'file', $event )">
           </genetate-form-item>
         </template>
         
