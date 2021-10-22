@@ -175,6 +175,8 @@
         :is-edit="/* Remove unused features of image upload in rendered form: widget.options.isEdit*/true"
         :action="/* Remove unused features of image upload in rendered form: widget.options.action*/''"
         @validate="validate"
+        :max-upload-size="maxUploadSize"
+        @fileIsTooBig="$emit( 'fileIsTooBig', $event )"
       >
       </fm-upload>
     </template>
@@ -212,7 +214,7 @@ import FmUpload from './Upload'
 import editorConfig from '../util/editorConfig'
 
 export default {
-  props: ['widget', 'models', 'rules', 'remote'],
+  props: ['widget', 'models', 'rules', 'remote', 'maxUploadSize'],
   components: {
     FmUpload
   },

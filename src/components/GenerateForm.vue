@@ -27,7 +27,9 @@
                   :remote="remote" 
                   :rules="rules" 
                   :widget="citem"
-                  @input-change="onInputChange">
+                  @input-change="onInputChange"
+                  :max-upload-size="maxUploadSize"
+                  @fileIsTooBig="$emit( 'fileIsTooBig', $event )">
                 </genetate-form-item>
               </template>
             </el-col>
@@ -48,7 +50,9 @@
             :widget="item" 
             @input-change="onInputChange"
             @validate="validate"
-            :remote="remote">
+            :remote="remote"
+            :max-upload-size="maxUploadSize"
+            @fileIsTooBig="$emit( 'fileIsTooBig', $event )">
           </genetate-form-item>
         </template>
         
@@ -66,7 +70,7 @@ export default {
   components: {
     GenetateFormItem
   },
-  props: ['data', 'remote', 'value', 'insite'],
+  props: ['data', 'remote', 'value', 'insite', 'maxUploadSize'],
   data () {
     return {
       models: {},

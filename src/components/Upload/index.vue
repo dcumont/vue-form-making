@@ -114,6 +114,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    maxUploadSize: {
+      type: Number,
+      default: 1048576, // 1Mo
     }
   },
   data () {
@@ -157,10 +161,13 @@ export default {
         reader.onload = () => {
 
           
-          if( file.size > 1048576 ){ // TODO: move to a config file
-            // console.log( 'Upload/index, handleChange' )
-            this.$emit( 'validate', false, 'InputRequired', 'FileIsTooBig' );
-            alert( this.$t('fm.config.widget.tooBig') )
+          if( file.size > this.maxUploadSize ){ // TODO: move to a config file
+            this.$emit( 'validate', false, 'fileIsTooBig' );
+            this.$emit( 'fileIsTooBig', {
+              fileSize: file.size,
+              maxUploadSize: this.maxUploadSize,
+              $el: this.$el,
+            });
             return
           }
 
